@@ -1,0 +1,23 @@
+<header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/">Интернет-магазин одежды</a>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a routerLink="/">Главная</a></li>
+          <li><a routerLink="/products">Товары</a></li>
+          <li><a routerLink="/cart">Корзина</a></li>
+          <li><a routerLink="/admin">Админка</a></li>
+        </ul>
+      </nav>
+      <div *ngIf="!isAuth()" class="user-info">
+        <a routerLink="/login">Войти</a>
+        <a routerLink="/register">Регистрация</a>
+      </div>
+      <div *ngIf="isAuth()" class="user-info">
+        <a routerLink="/user">Личный кабинет</a>
+        <a (click)="onLogout()">Выйти</a>
+      </div>
+    </div>
+  </header>

@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label class="form-label">
+      Name:
+      <input formControlName="name" class="form-input" />
+    </label>
+    <label class="form-label">
+      Description:
+      <textarea formControlName="description" class="form-input"></textarea>
+    </label>
+    <label class="form-label">
+      Price:
+      <input formControlName="price" type="number" class="form-input" />
+    </label>
+    <label class="form-label">
+      Brand:
+      <input formControlName="brand" class="form-input" />
+    </label>
+    <label class="form-label">
+      Color:
+      <input formControlName="color" class="form-input" />
+    </label>
+    <label class="form-label">
+      Size:
+      <input formControlName="size" class="form-input" />
+    </label>
+    <label class="form-label">
+      Count:
+      <input formControlName="count" type="number" class="form-input" />
+    </label>
+    <label class="form-label">
+      Category ID:
+      <input formControlName="category_id" type="number" class="form-input" />
+    </label>
+    <label class="form-label">
+        Image:
+        <input type="file" (change)="onFileSelected($event)" class="form-input" />
+    </label>
+    <div *ngIf="imagePreview" class="image-preview">
+        <img [src]="imagePreview" alt="Product Image" />
+      </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="formClosed.emit()">Cancel</button>
+    </div>
+</form>

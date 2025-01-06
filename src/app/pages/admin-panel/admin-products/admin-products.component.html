@@ -1,0 +1,29 @@
+<div>
+  <button (click)="addProduct()" class="btn btn-primary">Add Product</button>
+  <app-product-form 
+    *ngIf="showForm" 
+    [product]="selectedProduct" 
+    (formClosed)="closeForm()" 
+    (productSaved)="fetchProducts()">
+  </app-product-form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <button (click)="editProduct(product)" class="btn btn-warning">Edit</button>
+          <button (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
