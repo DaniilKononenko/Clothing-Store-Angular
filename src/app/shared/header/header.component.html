@@ -16,7 +16,6 @@
         <a routerLink="/register">Регистрация</a>
       </div>
       <div *ngIf="isAuth()" class="user-info">
-        <a routerLink="/user">Личный кабинет</a>
         <a (click)="onLogout()">Выйти</a>
       </div>
     </div>

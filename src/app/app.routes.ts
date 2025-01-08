@@ -12,7 +12,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 
 export const routes: Routes = [
     {path: '', redirectTo: 'products', pathMatch: 'full'},
-    {path: 'products', component: ProductListComponent, canActivate: [AuthGuard]},
+    {path: 'products', component: ProductListComponent},
     {path: 'cart', component: CartComponent},
     {path: 'user', component: RegisterFormComponent},
     {path: 'login', component: LoginFormComponent},
