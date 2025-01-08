@@ -1,21 +1,21 @@
 <div class="cart">
-    <h2>Корзина</h2>
-    <div class="cart-item" *ngFor="let item of cartItems">
-      <img [src]="item.imageUrl" alt="{{ item.name }}" />
-      <div class="cart-details">
-        <h3>{{ item.name }}</h3>
-        <p>Цена: {{ item.price | currency }}</p>
-        <div class="quantity-controls">
-          <button (click)="decreaseQuantity(item)">-</button>
-          <span>{{ item.quantity }}</span>
-          <button (click)="increaseQuantity(item)">+</button>
-        </div>
-        <p>Итого: {{ item.price * item.quantity | currency }}</p>
+  <h2>Корзина</h2>
+  <div class="cart-item" *ngFor="let item of cartItems">
+    <img [src]="item.imageUrl" alt="{{ item.name }}" />
+    <div class="cart-details">
+      <h3>{{ item.name }}</h3>
+      <p>Цена: {{ item.price | currency }}</p>
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increaseQuantity(item)">+</button>
       </div>
-      <button class="remove-btn" (click)="removeFromCart(item.id)">Удалить</button>
+      <p>Итого: {{ item.price * item.quantity | currency }}</p>
     </div>
-    <div class="cart-total">
-      <h3>Общая сумма: {{ totalPrice | currency }}</h3>
-    </div>
+    <button class="remove-btn" (click)="removeFromCart(item.id)">Удалить</button>
   </div>
+  <div class="cart-total">
+    <h3>Общая сумма: {{ totalPrice | currency }}</h3>
+  </div>
+</div>
   

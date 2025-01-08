@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { LoginFormComponent } from './components/auth/login-form/login-form.component';
 import { RegisterFormComponent } from './components/auth/register-form/register-form.component';
-import { AuthGuard } from './auth/auth.guard';
 import { CartComponent } from './pages/cart/cart.component';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { AdminGuard } from './auth/admin.guard';
