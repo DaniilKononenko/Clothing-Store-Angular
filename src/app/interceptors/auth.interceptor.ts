@@ -1,9 +1,9 @@
 import { HttpHandlerFn, HttpInterceptorFn, HttpRequest, HttpErrorResponse } from "@angular/common/http";
 import { inject } from "@angular/core";
-import { AuthService } from "./auth.service";
+import { AuthService } from "../services/auth.service";
 import { catchError, switchMap, throwError } from "rxjs";
 import { Router } from "@angular/router";
-import { TokenResponce } from "./token-responce";
+import { TokenResponce } from "../models/token-responce";
 
 export const authInteptor: HttpInterceptorFn = (req: HttpRequest<any>, next: HttpHandlerFn) => {
   const router: Router = inject(Router)

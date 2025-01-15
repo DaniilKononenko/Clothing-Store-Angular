@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, tap, of, throwError } from 'rxjs';
-import { TokenResponce } from './token-responce';
+import { catchError, Observable, tap, of } from 'rxjs';
+import { TokenResponce } from '../models/token-responce';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
-import { User } from './user.interface';
+import { User } from '../models/user.interface';
 
 @Injectable({
   providedIn: 'root'

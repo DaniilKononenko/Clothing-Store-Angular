@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
-import { ProductCreate } from '../../../common/productCreate';
-import { Product } from '../../../common/product';
+import { ProductCreate } from '../../../models/productCreate';
+import { Product } from '../../../models/product';
 import { ProductService } from '../../../services/product.service';
 import { ProductFormComponent } from '../../../components/forms/product-form/product-form.component';
 

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map, Observable, of } from 'rxjs';
 
-import { Product } from '../common/product';
-import { ProductCreate } from '../common/productCreate';
+import { Product } from '../models/product';
+import { ProductCreate } from '../models/productCreate';
 import { formatCurrency } from '@angular/common';
 
 @Injectable({

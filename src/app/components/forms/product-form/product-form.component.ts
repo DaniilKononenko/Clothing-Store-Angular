@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { ProductService } from '../../../services/product.service';
-import { Product } from '../../../common/product';
+import { Product } from '../../../models/product';
 
 
 @Component({

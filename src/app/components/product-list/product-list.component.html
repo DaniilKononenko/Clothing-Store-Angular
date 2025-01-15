@@ -1,8 +1,8 @@
 <div class="product-list">
     <div *ngFor="let product of products" class="product">
         <img [src]="product.image_url" [alt]="product.name" class="product__image">
-        <h3 class="product__price">{{ product.name }}</h3>
-        <p class="product-price">{{ product.price | currency }}</p>
+        <h3 class="product__name">{{ product.name }}</h3>
+        <p class="product__price">{{ product.price | currency }}</p>
     <button (click)="addToCart(product)" class="add-to-cart-button">Добавить в корзину</button>
     </div>
 </div>
